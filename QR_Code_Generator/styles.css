@@ -1,126 +1,90 @@
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top, #f59e0b, #b45309, #c2410c);
-    overflow: hidden;
-    animation: bgAnimation 20s infinite alternate;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
-
-@keyframes bgAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+body{
+    background: #262a2f;
 }
-
-.container {
+.container{
     width: 400px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    background: radial-gradient(ellipse at left, #43496e, #544d7e, #65589c);
-    text-align: center;
-    transform: translateY(-50px);
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 10px;
 }
-
-@keyframes float {
-    0% { transform: translateY(-10px); }
-    100% { transform: translateY(10px); }
-}
-
-.container p {
-    color: #fff;
+.container p{
     font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 12px;
+    font-size: 15px;
+    margin-bottom: 8px;
 }
-
-.container input {
+.container input{
     width: 100%;
     height: 50px;
-    margin-bottom: 20px;
-    padding: 0 15px;
-    border: none;
-    outline: none;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 14px;
-    transition: 0.3s ease;
+    border: 1px solid #494eea;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
 }
-
-.container input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.container input:focus {
-    background: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 0 10px rgba(108, 99, 255, 0.7);
-}
-
-.container button {
+.container button{
     width: 100%;
     height: 50px;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #494eea, #6c63ff);
+    background: #494eea;
     color: #fff;
-    font-weight: 600;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    font-weight: 500;
 }
-
-.container button:hover {
-    transform: scale(1.05) translateY(-3px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-}
-
-#imgBox {
-    width: 220px;
-    margin: 0 auto;
-    border-radius: 15px;
+#imgBox{
+    width: 200px;
+    border-radius: 5px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s ease, transform 0.5s ease;
+    transition: max-height 1s;
 }
-
-#imgBox.show-img {
-    max-height: 350px;
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-#imgBox img {
+#imgBox img{
     width: 100%;
-    border-radius: 15px;
+    padding: 10px;
 }
-
-.error {
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+.error{
     animation: shake 0.1s linear 10;
 }
-
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-3px); }
-    50% { transform: translateX(3px); }
-    75% { transform: translateX(-3px); }
-    100% { transform: translateX(0); }
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+   100%{
+        transform: translateX(0);
+    }
 }
 
-.watch-link {
+.watch-link{
     display: block;
-    font-size: 13px;
-    text-decoration: none;
+    font-size: 12px;
     width: fit-content;
-    margin: 15px auto 0;
-    color: #fff;
-    transition: 0.3s ease;
-}
-
-.watch-link:hover {
-    color: #6c63ff;
-    text-shadow: 0 0 10px rgba(108, 99, 255, 0.7);
+    margin: auto;
+    text-decoration: none;
 }
